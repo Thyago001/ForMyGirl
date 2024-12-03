@@ -1,0 +1,244 @@
+/* Configurações gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(254, 241, 241, 0.8);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 
+    100vh;
+}
+.play-button {
+    padding: 15px 30px; /* Tamanho do botão */
+    border-radius: 25px; /* Cantos arredondados */
+    border: 2px solid rgba(255, 30, 68, 0.8); /* Borda vermelha */
+    background-color: transparent; /* Fundo transparente */
+    color: rgba(255, 30, 68, 0.8); /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    cursor: pointer;
+    transition: border-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(255, 30, 68, 0.5); /* Sombra suave */
+    text-align: center; /* Centraliza o texto */
+}
+
+.play-button:hover {
+    border-color: rgba(255, 30, 68, 1); /* Borda mais intensa ao passar o mouse */
+    color: rgba(255, 30, 68, 1); /* Texto mais intenso ao passar o mouse */
+    box-shadow: 0 0 20px rgba(255, 30, 68, 1); /* Brilho ao passar o mouse */
+}
+
+.outer-container {
+    background-color: rgba(0, 0, 0, 0.895);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(255, 0, 0);
+    max-width: 80%;
+    margin: auto;
+}
+
+.container {
+    text-align: center;
+    overflow: hidden;
+}
+
+.main-text {
+    font-size: 3em;
+    font-weight: bold;
+    border: 3px solid white;
+    border-radius: 50px;
+    padding: 20px;
+    margin: 20px auto;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.main-text:hover {
+    text-shadow: 0 0 10px rgb(255, 0, 0);
+    padding: 25px;
+}
+
+/* Estilo do Contador */
+.contador {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tempo {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ff66b2;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 20px;
+    width: 100px; /* Ajuste o tamanho aqui */
+    height: 100px; /* Ajuste o tamanho aqui */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.tempo:hover {
+    transform: scale(1.05);
+}
+
+.numero {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.label {
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+/* Estilo do Flip Card */
+.flip-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 400px;
+    position: relative;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: rgb(255, 8, 8);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.nav-button:hover {
+    transform: scale(1.2);
+}
+
+.flip-card {
+    width: 500px;
+    max-width: 500px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flip-card-front {
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-back {
+    background: rgba(14, 10, 10, 0.644);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text {
+    font-size: 1.2em;
+    padding: 10px;
+    color: rgb(255, 9, 9);
+    text-align: justify;
+}
+
+.flip-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-indicators {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-indicators span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgb(255, 0, 0);
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.carousel-indicators span.active {
+    opacity: 1;
+}
+
+.dedication {
+    font-weight: 30px;
+    margin: 10px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ff1e44, #e5176d);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    text-align: justify;
+}
+
+.dedication-title {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+
+}
+
+.action-button {
+    margin-top: 20px;
+    text-align: center; /* Alinha o botão ao centro */
+}
+
+#magic-button {
+    background-color: rgb(220, 14, 14);
+    color: rgb(255, 243, 243);
+    font-size: 1.2em;
+    text-shadow:  0 0 15px rgb(239, 228, 228);
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#magic-button:hover {
+    transform: scale(1.1);
+}
+
+#love-message {
+    margin-top: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow:  0 0 10px rgb(255, 0, 174);
+    display: none;
+} 

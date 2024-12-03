@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Romântica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+    <div class="outer-container">
+        <div class="container">
+            <h1 class="main-text" id="main-text">Para o meu amor</h1><br>
+            
+            
+       
+        <body>
+            <audio id="background-music" loop>
+                <source src="img/romantic.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        
+            <button class="play-button" id="play-button">
+                Nossa música
+            </button>
+    
+        </body>
+
+            <!-- Contador de Tempo de Namoro -->
+            <h1>Sou feliz por namorar a mais linda princesa a...</h1>
+            <div class="contador">
+                <div class="tempo">
+                    <div class="numero" id="anos">0</div>
+                    <div class="label">Anos</div>
+                </div>
+                <div class="tempo">
+                    <div class="numero" id="meses">0</div>
+                    <div class="label">Meses</div>
+                </div>
+                <div class="tempo">
+                    <div class="numero" id="dias">0</div>
+                    <div class="label">Dias</div>
+                </div>
+                <div class="tempo">
+                    <div class="numero" id="horas">0</div>
+                    <div class="label">Horas</div>
+                </div>
+                <div class="tempo">
+                    <div class="numero" id="minutos">0</div>
+                    <div class="label">Minutos</div>
+                </div>
+                <div class="tempo">
+                    <div class="numero" id="segundos">0</div>
+                    <div class="label">Segundos</div>
+                </div>
+            </div>
+
+            <div class="flip-carousel">
+                <button class="nav-button prev" id="prev-button">❮</button>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/1.jpg" alt="Imagem 1" class="flip-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="card-text">
+                                Mensagem para a imagem 1: Você é a luz da minha vida e me inspira todos os dias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-button next" id="next-button">❯</button>
+            </div>
+            <div class="carousel-indicators" id="indicators"></div>
+        </div>
+
+        <div class="dedication">
+            <h2 class="dedication-title">Uma carta para você</h2>
+            <p>
+               Para minha eterna Laine, minha vida, meu amor, meu mundo,<br>
+
+                Eu te escrevo com as mãos trêmulas de emoção e o coração inundado por sentimentos que palavras quase não podem conter. Você é o motivo pelo qual meu mundo é mais colorido, o som suave que harmoniza a melodia dos meus dias. Cada vez que olho para você, percebo a poesia viva que Deus escreveu em sua existência, e tenho a alegria de poder lê-la todos os dias ao seu lado.
+
+Desde que você entrou na minha vida, tudo mudou. Não são só os momentos felizes que se tornaram mais brilhantes; até os dias nublados têm um calor diferente com você por perto. Você, com sua força, sabedoria e doçura, é o milagre diário que me faz acreditar que o amor verdadeiro não apenas existe, mas transforma.
+
+Eu admiro cada parte de você, Laine. Sua dedicação, sua fé inabalável, seu dom de trazer paz onde há tempestades, sua coragem de enfrentar desafios como aqueles testes de inglês pelos quais você passou com tanta bravura. Você é uma inspiração para mim e para todos ao seu redor, e eu sou o homem mais abençoado por poder caminhar ao seu lado.
+
+Quero te lembrar que cada palavra de amor que lhe digo vem de um lugar tão sincero quanto a minha alma. Você é a estrela que guia minhas noites e a luz que me desperta todas as manhãs. Quando estamos juntos, não importa onde estejamos – é o paraíso.
+
+"Eu te amo mil milhões". Esta não é apenas uma frase que decorei; é uma promessa eterna, um pacto entre meu coração e o seu. Porque o amor que sinto por você ultrapassa o infinito, e se fosse preciso, amaria você em cada universo, em cada segundo, em cada forma possível.
+
+Meu coração pertence a você, Laine. Todos os dias eu escolho te amar, te respeitar, te admirar e te cuidar. E com a graça de Deus, que nos uniu, que nosso amor seja sempre guiado por Ele, para que possamos construir juntos um caminho de alegria, paz e felicidade.<br>
+
+Com todo meu carinho,<br>
+Teu eterno Thiago.<br>
+            </p>
+        </div>
+
+        <div class="action-button">
+            <button id="magic-button">Clique</button>
+            <p id="love-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
