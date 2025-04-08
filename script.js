@@ -1,3 +1,7 @@
+
+<script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+
+<script>
 const flipCardInner = document.getElementById("flip-card-inner");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
@@ -44,39 +48,37 @@ function flipCard() {
 
 function nextCard() {
     currentCardIndex = (currentCardIndex + 1) % cards.length;
-    flipCardInner.style.transform = "rotateY(0deg)"; // Reseta ao mudar
+    flipCardInner.style.transform = "rotateY(0deg)";
     updateCard();
     updateIndicators();
 }
 
 function prevCard() {
     currentCardIndex = (currentCardIndex - 1 + cards.length) % cards.length;
-    flipCardInner.style.transform = "rotateY(0deg)"; // Reseta ao mudar
+    flipCardInner.style.transform = "rotateY(0deg)";
     updateCard();
     updateIndicators();
 }
+
+// 💖 Função atualizada com Luxon
 function atualizarContador() {
-    const dataInicio = new Date('2024-07-11T00:00:00'); // Data de início
-    const agora = new Date();
-    const tempoDecorrido = agora - dataInicio;
+    const { DateTime } = luxon;
 
-    const anos = Math.floor(tempoDecorrido / (1000 * 60 * 60 * 24 * 365));
-    const meses = Math.floor((tempoDecorrido % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
-    const dias = Math.floor((tempoDecorrido % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((tempoDecorrido % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((tempoDecorrido % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((tempoDecorrido % (1000 * 60)) / 1000);
+    const dataInicio = DateTime.fromISO("2024-07-11T00:00:00");
+    const agora = DateTime.now();
 
-    document.getElementById('anos').innerText = anos;
-    document.getElementById('meses').innerText = meses;
-    document.getElementById('dias').innerText = dias;
-    document.getElementById('horas').innerText = horas;
-    document.getElementById('minutos').innerText = minutos;
-    document.getElementById('segundos').innerText = segundos;
+    const diferenca = agora.diff(dataInicio, ["years", "months", "days", "hours", "minutes", "seconds"]).toObject();
+
+    document.getElementById("anos").innerText = Math.floor(diferenca.years);
+    document.getElementById("meses").innerText = Math.floor(diferenca.months);
+    document.getElementById("dias").innerText = Math.floor(diferenca.days);
+    document.getElementById("horas").innerText = Math.floor(diferenca.hours);
+    document.getElementById("minutos").innerText = Math.floor(diferenca.minutes);
+    document.getElementById("segundos").innerText = Math.floor(diferenca.seconds);
 }
 
-setInterval(atualizarContador, 1000); // Atualiza a cada segundo
-atualizarContador(); // Chama a função uma vez para inicializar
+setInterval(atualizarContador, 1000);
+atualizarContador();
 
 // Event listeners
 flipCardInner.addEventListener("click", flipCard);
@@ -97,7 +99,7 @@ cards.forEach((_, i) => {
 
 function showImage(index) {
     currentCardIndex = index;
-    flipCardInner.style.transform = "rotateY(0deg)"; // Reseta ao mudar
+    flipCardInner.style.transform = "rotateY(0deg)";
     updateCard();
     updateIndicators();
 }
@@ -124,10 +126,5 @@ magicButton.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * loveMessages.length);
     loveMessage.textContent = loveMessages[randomIndex];
     loveMessage.style.display = "block";
-});hength;
-    loveMessage.textContent = loveMessages[randomIndex];
-    loveMessage.style.display = "block";
-;const randomIndex = Math.floor(Math.random() * loveMessages.length);
-    loveMessage.textContent = loveMessages[randomIndex];
-    loveMessage.style.display = "block";
-;
+});
+</script>
