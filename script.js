@@ -1,5 +1,4 @@
 
-<script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
 
 <script>
 const flipCardInner = document.getElementById("flip-card-inner");
